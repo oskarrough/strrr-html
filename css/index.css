@@ -1,0 +1,105 @@
+html {
+	font-size: 18px;
+	line-height: 1.5;
+	font-family: cinetype, system-ui, segoe ui, sans-serif;
+	background-color: #f0f0f0;
+	color: #1a1a1a;
+}
+
+@media (min-width: 1000px) {
+	html {
+		font-size: 2vw;
+	}
+}
+
+body {
+	margin: 1rem;
+}
+
+figure {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+h2 {
+	margin: 1rem 0 0.5rem;
+}
+
+/* a {
+	color: #000;
+	color: blue;
+} */
+
+.Mono {
+	font-family: cinetype-mono, monospace;
+	font-size: 0.75em;
+}
+
+.Logo svg {
+	font-size: 4rem;
+	width: 1em;
+	height: 1em;
+}
+
+.Teaser {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 20rem;
+}
+.Teaser a {
+	margin-left: 1em;
+	text-decoration: none;
+	background: black;
+	color: white;
+	padding-right: 0.3em;
+}
+.Teaser img {
+	vertical-align: bottom;
+	margin-right: 0.2em;
+	height: 1.5em;
+}
+.Teaser a:hover {
+	background: none;
+	color: initial;
+}
+.Teaser .Mono {
+	margin-left: 1rem;
+}
+
+@font-face {
+	font-family: cinetype;
+	font-weight: 400;
+	src: url(https://res.cloudinary.com/strrr/raw/upload/v1491471067/gt-cinetype-regular_wl6yht.woff)
+		format('woff');
+}
+@font-face {
+	font-family: cinetype;
+	font-weight: 400;
+	font-style: italic;
+	src: url(https://res.cloudinary.com/strrr/raw/upload/v1491471067/gt-cinetype-regular-italic_anxcuw.woff)
+		format('woff');
+}
+@font-face {
+	font-family: cinetype;
+	font-weight: 700;
+	src: url(https://res.cloudinary.com/strrr/raw/upload/v1491471068/gt-cinetype-bold_nmm0ve.woff)
+		format('woff');
+}
+@font-face {
+	font-family: cinetype;
+	font-weight: 700;
+	font-style: italic;
+	src: url(https://res.cloudinary.com/strrr/raw/upload/v1491471067/gt-cinetype-bold-italic_bte4kh.woff)
+		format('woff');
+}
+@font-face {
+	font-family: cinetype-mono;
+	font-style: normal;
+	src: url(https://res.cloudinary.com/strrr/raw/upload/v1491471067/gt-cinetype-mono_wfipod.woff)
+		format('woff');
+}

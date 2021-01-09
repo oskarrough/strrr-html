@@ -1,0 +1,24 @@
+---
+pagination:
+    data: shows
+    size: 1
+    alias: show
+permalink: "shows/{{ show.id }}/"
+layout: base.njk
+---
+
+<article>
+	<figure>
+		<picture>
+			<source srcset="https://res.cloudinary.com/strrr/image/upload/c_thumb,f_auto,q_auto:good,h_900,ar_3:4,e_sharpen:75/{{show.image}}" media="(min-width: 800px)">
+			<img src="https://res.cloudinary.com/strrr/image/upload/c_thumb,f_auto,q_auto:good,w_600,ar_16:10,e_sharpen:75/{{show.image}}" alt={{show.title}}>
+		</picture>
+	</figure>
+	<button disabled>Play</button>
+	<h1>{{show.title}}</h1>
+	<h3>Season {{show.season-number}} &middot; Episode {{show.episode-number}}</h3>
+	<p>{{show.description}}</p>
+	<p><small>{{show.credits}}</small></p>
+</article>
+
+<p><a href="/">&larr; See all episodes</a> </p>
