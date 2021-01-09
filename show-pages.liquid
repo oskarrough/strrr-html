@@ -7,18 +7,20 @@ permalink: "shows/{{ show.id }}/"
 layout: base.njk
 ---
 
-<article>
-	<figure>
+<article class="Duo">
+	<figure class="Duo-first">
 		<picture>
 			<source srcset="https://res.cloudinary.com/strrr/image/upload/c_thumb,f_auto,q_auto:good,h_900,ar_3:4,e_sharpen:75/{{show.image}}" media="(min-width: 800px)">
 			<img src="https://res.cloudinary.com/strrr/image/upload/c_thumb,f_auto,q_auto:good,w_600,ar_16:10,e_sharpen:75/{{show.image}}" alt={{show.title}}>
 		</picture>
 	</figure>
-	<button disabled>Play</button>
-	<h1>{{show.title}}</h1>
-	<h3>Season {{show.season-number}} &middot; Episode {{show.episode-number}}</h3>
-	<p>{{show.description}}</p>
-	<p><small>{{show.credits}}</small></p>
+	<div class="Duo-second">
+		<p><button disabled>Play</button></p>
+		<h1>{{show.title}}</h1>
+		<h3>Season {{show.season-number}} &middot; Episode {{show.episode-number}}</h3>
+		<p>{{show.description}}</p>
+		<p><small>{{show.credits}}</small></p>
+	</div>
 </article>
 
 <p><a href="/">&larr; See all episodes</a> </p>

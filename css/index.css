@@ -23,6 +23,7 @@ figure {
 
 img {
 	max-width: 100%;
+	vertical-align: bottom;
 }
 
 h2 {
@@ -69,6 +70,33 @@ h2 {
 }
 .Teaser .Mono {
 	margin-left: 1rem;
+}
+
+.Duo {
+	/* min-height: 100vh; */
+	display: flex;
+	flex-flow: column nowrap;
+	flex-direction: column;
+}
+.Duo-first {
+	/* background: #000; */
+}
+@media (min-width: 1000px) {
+	.Duo {
+		flex-direction: row;
+	}
+	.Duo-first {
+		/* position: fixed; */
+		width: 50%;
+		flex: 1;
+	}
+	.Duo-second {
+		width: 50%;
+		margin-left: auto;
+		display: flex;
+		flex-flow: column nowrap;
+		padding-left: 2em;
+	}
 }
 
 @font-face {
