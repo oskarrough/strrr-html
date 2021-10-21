@@ -1,16 +1,28 @@
 html {
-	font-size: 18px;
+	/* font-size: 18px; */
+	/* font-size: clamp(18px, 1rem + .4vw, 24px); */
+	font-size: clamp(18px, 0.875rem + 2vw, 28px);
 	line-height: 1.5;
 	font-family: cinetype, system-ui, segoe ui, sans-serif;
 	background-color: #f0f0f0;
 	color: #1a1a1a;
 }
 
-@media (min-width: 1000px) {
-	html {
-		font-size: 2vw;
-	}
+h1 {
+	font-size: 3rem;
 }
+
+h2 {
+	font-size: 2rem;
+	margin: 1rem 0 0.5rem;
+}
+
+h3 {
+	font-size: 1rem;
+	margin: 0;
+	font-weight: 400;
+}
+
 
 body {
 	margin: 1rem;
@@ -25,15 +37,6 @@ img {
 	max-width: 100%;
 	vertical-align: bottom;
 }
-
-h2 {
-	margin: 1rem 0 0.5rem;
-}
-
-/* a {
-	color: #000;
-	color: blue;
-} */
 
 .Mono {
 	font-family: cinetype-mono, monospace;
@@ -50,23 +53,25 @@ h2 {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	max-width: 20rem;
+	max-width: 30ch;
+}
+.Teaser h3 {
+	margin-left: 1em;
+	background: black;
 }
 .Teaser a {
-	margin-left: 1em;
 	text-decoration: none;
-	background: black;
 	color: white;
 	padding-right: 0.3em;
+}
+.Teaser a:hover {
+	background: none;
+	color: initial;
 }
 .Teaser img {
 	vertical-align: bottom;
 	margin-right: 0.2em;
 	height: 1.5em;
-}
-.Teaser a:hover {
-	background: none;
-	color: initial;
 }
 .Teaser .Mono {
 	margin-left: 1rem;
