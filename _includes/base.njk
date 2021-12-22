@@ -14,5 +14,12 @@
     </h1>
     
     {{ content | safe }}
+
+    <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js"></script>
+    <script>
+      window.addEventListener('load', () => {
+        if (quicklink) quicklink.listen()
+      })
+    </script>
   </body>
 </html>
