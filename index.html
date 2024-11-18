@@ -8,10 +8,10 @@ title: STRRR
 
 	{% for show in season -%}
 	<article class="Teaser">
-		<!-- <span class="Mono">{{ show.season-number }}/{{show.episode-number }}</span> --> 
-		<span class="Mono">{{show.episode-number}}.</span> 
+		<!-- <span class="Mono">{{ show.season_number }}/{{show.episode_number }}</span> -->
+		<span class="Mono">{{show.episode_number}}.</span>
 		<h3>
-			<a href="/shows/{{show.season-number}}-{{show.episode-number}}">
+			<a href="/shows/{{show.season_number}}/{{show.episode_number}}/">
 				<img height="24" loading="lazy" src="https://res.cloudinary.com/strrr/image/upload/c_thumb,f_auto,q_auto:good,w_600,ar_16:10,e_sharpen:75/{{show.image}}" alt={{show.title}}>
 				{{ show.title}}
 			</a>

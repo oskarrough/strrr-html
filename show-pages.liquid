@@ -1,10 +1,10 @@
 ---
 pagination:
   data: shows
-  size: 1
   alias: show
-permalink: "shows/{{ show.season-number }}-{{ show.episode-number }}/index.html"
+  size: 1
 layout: base.njk
+permalink: "shows/{{show.season_number}}/{{show.episode_number}}/"
 ---
 
 <article class="Duo">
@@ -17,7 +17,7 @@ layout: base.njk
 	<div class="Duo-second">
 		<p><button disabled>Play</button></p>
 		<h1>{{show.title}}</h1>
-		<h3>Season {{show.season-number}} &middot; Episode {{show.episode-number}}</h3>
+		<h3>Season {{show.season_number}} &middot; Episode {{show.episode_number}}</h3>
 		<p>{{show.description}}</p>
 		<p><small>{{show.credits}}</small></p>
 	</div>
