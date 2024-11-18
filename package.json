@@ -1,18 +1,18 @@
 {
   "name": "strrr-light",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "dependencies": {},
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1"
+    "@11ty/eleventy": "^3.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx @11ty/eleventy --serve",
-    "build": "make && npx @11ty/eleventy"
+    "dev": "bunx @11ty/eleventy --serve",
+    "build": "make && bunx @11ty/eleventy",
+    "fetch-database": "make"
   },
-  "keywords": [],
-  "author": "",
+  "author": "oskarrough",
   "license": "ISC"
 }
