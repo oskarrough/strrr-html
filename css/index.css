@@ -1,31 +1,68 @@
+/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,26,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+	--step--2: clamp(0.7813rem, 0.6913rem + 0.45vw, 1.04rem);
+	--step--1: clamp(0.9375rem, 0.8114rem + 0.6304vw, 1.3rem);
+	--step-0: clamp(1.125rem, 0.9511rem + 0.8696vw, 1.625rem);
+	--step-1: clamp(1.35rem, 1.113rem + 1.1848vw, 2.0313rem);
+	--step-2: clamp(1.62rem, 1.3003rem + 1.5984vw, 2.5391rem);
+	--step-3: clamp(1.944rem, 1.5162rem + 2.1388vw, 3.1738rem);
+	--step-4: clamp(2.3328rem, 1.7643rem + 2.8426vw, 3.9673rem);
+	--step-5: clamp(2.7994rem, 2.0481rem + 3.7561vw, 4.9591rem);
+
+	--bg: #f0f0f0;
+	--text: #1a1a1a;
+}
+
 html {
-	/* font-size: 18px; */
-	/* font-size: clamp(18px, 1rem + .4vw, 24px); */
-	font-size: clamp(18px, 0.875rem + 2vw, 28px);
+	font-size: var(--step-0);
 	line-height: 1.5;
-	font-family: cinetype, system-ui, segoe ui, sans-serif;
-	background-color: #f0f0f0;
-	color: #1a1a1a;
+	font-family:
+		cinetype,
+		system-ui,
+		segoe ui,
+		sans-serif;
+	background-color: var(--bg);
+	color: var(--text) j;
 }
 
-h1 {
-	font-size: 3rem;
-}
-
-h2 {
-	font-size: 2rem;
-	margin: 1rem 0 0.5rem;
-}
-
+h1,
+h2,
 h3 {
 	font-size: 1rem;
 	margin: 0;
-	font-weight: 400;
 }
 
+h1 {
+	font-size: var(--step-3);
+	margin: 0;
+}
+
+h2 {
+	font-size: var(--step-2);
+	margin: 0;
+}
+
+.Teaser + h2 {
+	margin-top: 5vh;
+}
+
+h3 {
+	font-size: var(--step-0);
+	font-weight: 400;
+	margin: 0;
+}
+
+p {
+	margin: 0;
+}
 
 body {
-	margin: 1rem;
+	margin: 2vw;
+}
+
+a {
+	color: var(--text);
 }
 
 figure {
@@ -49,11 +86,15 @@ img {
 	height: 1em;
 }
 
+h2 + .Teaser {
+	margin-top: 1rem;
+}
+
 .Teaser {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	max-width: 30ch;
+	max-width: 40ch;
 }
 .Teaser h3 {
 	margin-left: 1em;
@@ -108,31 +149,62 @@ img {
 	font-family: cinetype;
 	font-weight: 400;
 	src: url(https://res.cloudinary.com/strrr/raw/upload/v1491471067/gt-cinetype-regular_wl6yht.woff)
-		format('woff');
+		format("woff");
 }
 @font-face {
 	font-family: cinetype;
 	font-weight: 400;
 	font-style: italic;
 	src: url(https://res.cloudinary.com/strrr/raw/upload/v1491471067/gt-cinetype-regular-italic_anxcuw.woff)
-		format('woff');
+		format("woff");
 }
 @font-face {
 	font-family: cinetype;
 	font-weight: 700;
 	src: url(https://res.cloudinary.com/strrr/raw/upload/v1491471068/gt-cinetype-bold_nmm0ve.woff)
-		format('woff');
+		format("woff");
 }
 @font-face {
 	font-family: cinetype;
 	font-weight: 700;
 	font-style: italic;
 	src: url(https://res.cloudinary.com/strrr/raw/upload/v1491471067/gt-cinetype-bold-italic_bte4kh.woff)
-		format('woff');
+		format("woff");
 }
 @font-face {
 	font-family: cinetype-mono;
 	font-style: normal;
 	src: url(https://res.cloudinary.com/strrr/raw/upload/v1491471067/gt-cinetype-mono_wfipod.woff)
-		format('woff');
+		format("woff");
+}
+
+.videos {
+	font-size: var(--step--1);
+	padding: 0;
+	list-style: none;
+
+	li {
+		border-bottom: 1px solid #ccc;
+		padding: 2px 0;
+	}
+}
+
+menu {
+	padding: 0;
+	display: flex;
+	place-items: center;
+	gap: 0.5em;
+}
+
+button {
+	font-size: 1rem;
+	border: 1px solid;
+	border-radius: none;
+	font-family: inherit;
+	padding: 0 5px 2px;
+}
+
+strrr-player {
+	display: block;
+	border: 1px solid black;
 }
