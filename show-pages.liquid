@@ -7,6 +7,8 @@ layout: base.njk
 permalink: "shows/{{show.season_number}}/{{show.episode_number}}/"
 ---
 
+<script>console.log({{ show | json }})</script>
+
 <article class="Duo">
 	<figure class="Duo-first">
 		<picture>
@@ -15,12 +17,34 @@ permalink: "shows/{{show.season_number}}/{{show.episode_number}}/"
 		</picture>
 	</figure>
 	<div class="Duo-second">
-		<p><button disabled>Play</button></p>
+		<ul class="videos" style="display: none">
+			{% for vid in show.videos -%}
+			<li>
+			<button class="video-play-btn" data-index="{{forloop.index0}}">
+				Video {{forloop.index0 | plus: 1}}
+			</button>
+				{{vid.start_time}}/{{vid.end_time}}<br/>
+			</li>
+		{% endfor %}
+		</ul>
+
+	<script>
+		window.showData = {{show | json}};
+	</script>
+	<strrr-player></strrr-player>
+	<menu>
+				<button id="prev-btn">Prev</button>
+				<!-- <button id="play-btn">play</button> -->
+				<span id="video-progress"></span>
+				<button id="next-btn">Next</button>
+			</menu>
+
 		<h1>{{show.title}}</h1>
-		<h3>Season {{show.season_number}} &middot; Episode {{show.episode_number}}</h3>
+		<h2>Season {{show.season_number}} &middot; Episode {{show.episode_number}}</h2>
+
 		<p>{{show.description}}</p>
 		<p><small>{{show.credits}}</small></p>
 	</div>
 </article>
 
-<p><a href="/">&larr; See all episodes</a> </p>
+<p><a href="/">&larr; All episodes</a> </p>
