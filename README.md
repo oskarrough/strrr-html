@@ -1,6 +1,7 @@
 # strrr-html
 
-A tiny prototype for a strrr.tv website. You can browse all seasons and episodes, but not currently play them.
+A tiny prototype for a simpler, non-spa strrr.tv website. 
+You can browse seasons and watch all episodes.
 
 ## Developing
 
