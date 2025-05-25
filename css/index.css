@@ -35,12 +35,16 @@ h3 {
 
 h1 {
 	font-size: var(--step-3);
-	margin: 0;
+	line-height: 1;
 }
 
 h2 {
 	font-size: var(--step-2);
-	margin: 0;
+	line-height: 1;
+}
+
+h3 {
+	font-size: var(--step-1);
 }
 
 .Teaser + h2 {
@@ -58,7 +62,7 @@ p {
 }
 
 body {
-	margin: 2vw;
+	margin: 4vw;
 }
 
 a {
@@ -66,8 +70,7 @@ a {
 }
 
 figure {
-	margin-left: 0;
-	margin-right: 0;
+	margin: 0;
 }
 
 img {
@@ -78,6 +81,11 @@ img {
 .Mono {
 	font-family: cinetype-mono, monospace;
 	font-size: 0.75em;
+}
+
+.Logo a {
+	display: flex;
+	padding: 1rem 0 2rem;
 }
 
 .Logo svg {
@@ -123,27 +131,45 @@ h2 + .Teaser {
 	display: flex;
 	flex-flow: column nowrap;
 	flex-direction: column;
+
+	img {
+		/* max-height: 50vh; */
+	}
+
+	iframe {
+		display: block;
+		width: 100%;
+		height: auto;
+		aspect-ratio: 16/9;
+		margin-bottom: 1vw;
+	}
 }
+
 .Duo-first {
-	/* background: #000; */
 }
+
+picture {
+	display: flex;
+}
+
 @media (min-width: 1000px) {
 	.Duo {
 		flex-direction: row;
+		gap: 5vw;
 	}
 	.Duo-first {
-		/* position: fixed; */
-		width: 50%;
-		flex: 1;
+		width: 40%;
 	}
 	.Duo-second {
-		width: 50%;
+		width: 60%;
 		margin-left: auto;
 		display: flex;
 		flex-flow: column nowrap;
-		padding-left: 2em;
 	}
 }
+
+.Duo-second h1 { margin-top: 3vh; margin-bottom: 0vw; }
+.Duo-second h3 { margin-top: 0vw; margin-bottom: 1.5vw;}
 
 @font-face {
 	font-family: cinetype;

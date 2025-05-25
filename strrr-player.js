@@ -220,7 +220,3 @@ customElements.define(
 	},
 );
 
-// Debug logging when showData is available
-if (typeof window !== 'undefined' && window.showData) {
-	console.log(window.showData);
-}
