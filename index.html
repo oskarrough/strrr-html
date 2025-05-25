@@ -3,8 +3,10 @@ layout: base.njk
 title: STRRR
 ---
 
+<script>console.log({{seasons | json}})</script>
+
 {% for season in seasons -%}
-	<h2>Season {{forloop.index}}</h2>
+	<h2>Season {{season[0].season_number}}</h2>
 	{% for show in season -%}
 	<article class="Teaser">
 		<!-- <span class="Mono">{{ show.season_number }}/{{show.episode_number }}</span> -->
