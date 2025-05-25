@@ -11,3 +11,4 @@ export default [
 	showsBySeason(2),
 	showsBySeason(1),
 ];
+
