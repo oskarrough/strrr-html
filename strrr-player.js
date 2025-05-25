@@ -1,7 +1,6 @@
-// <script src='https://cdn.jsdelivr.net/npm/@mux/mux-player' defer></script>
-// <script type="module" src="https://cdn.jsdelivr.net/npm/media-chrome@4/+esm"></script>
-
 // scripts loaded in base.njk
+// <script type="module" src="https://cdn.jsdelivr.net/npm/youtube-video-element@1/+esm"></script>
+// <script type="module" src="https://cdn.jsdelivr.net/npm/media-chrome@4/+esm"></script>
 
 // https://github.com/muxinc/media-elements/tree/main/packages/youtube-video-element
 
