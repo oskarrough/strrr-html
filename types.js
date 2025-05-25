@@ -1,4 +1,19 @@
 /**
+ * @typedef {Object} StrrrShow
+ * @property {number} id
+ * @property {number} season_number
+ * @property {number} episode_number
+ * @property {number} order
+ * @property {string} host
+ * @property {string} image - cloudinary id 
+ * @property {string} title
+ * @property {string} description
+ * @property {string} credits
+ * @property {boolean} is_published
+ * @property {Video[]} videos
+ */
+
+/**
  * @typedef {Object} VideoStatus
  * @property {boolean} embeddable Whether the video can be embedded
  * @property {string} license The license type of the video
@@ -9,23 +24,23 @@
 
 /**
  * @typedef {Object} VideoInfo
- * @property {number} duration Duration of the video in seconds
  * @property {string} id Video ID from the provider (e.g., YouTube ID)
  * @property {string} provider Video provider name (e.g., 'youtube')
- * @property {VideoStatus} status Status information about the video
+ * @property {string} url 
+ * @property {string} title 
+ * @property {number} duration in seconds
  * @property {string} thumbnail URL to the video thumbnail image
- * @property {string} title Title of the video
- * @property {string} url Full URL to the video
+ * @property {VideoStatus} status Status information about the video
  */
 
 /**
  * @typedef {Object} StrrrVideo
- * @property {number} id Unique identifier for the video
- * @property {VideoInfo} info Detailed information about the video
- * @property {string} title Display title for the video
- * @property {string} url URL to the video
- * @property {number} order Display order of the video
- * @property {number} show_id ID of the show this video belongs to
- * @property {number|null} start_time Start time for playback in seconds (if applicable)
- * @property {number|null} end_time End time for playback in seconds (if applicable)
+ * @property {number} id 
+ * @property {number} show_id 
+ * @property {string} title 
+ * @property {string} url youtube url
+ * @property {number} order 
+ * @property {number|null} start_time in seconds
+ * @property {number|null} end_time in seconds
+ * @property {VideoInfo} info Third party information about the video
  */
