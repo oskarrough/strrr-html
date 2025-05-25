@@ -8,11 +8,10 @@ permalink: "shows/{{show.season_number}}/{{show.episode_number}}/"
 ---
 
 {% comment %} <script>console.log('shows', {{ shows | json }})</script> {% endcomment %}
-{% comment %} <script>console.log('playlists', {{ playlists | json }})</script> {% endcomment %}
 
 <article class="Duo">
 	<figure class="Duo-first">
-		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed?listType=playlist&list={{show.playlist.playlist_id}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed?listType=playlist&list={{show.playlist_id}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 		<picture>
 			<source srcset="https://res.cloudinary.com/strrr/image/upload/c_thumb,f_auto,q_auto:good,h_900,ar_3:4,e_sharpen:75/{{show.image}}" media="(min-width: 1000px)">
 			<img src="https://res.cloudinary.com/strrr/image/upload/c_thumb,f_auto,q_auto:good,w_600,ar_16:10,e_sharpen:75/{{show.image}}" alt={{show.title}}>
@@ -48,8 +47,8 @@ permalink: "shows/{{show.season_number}}/{{show.episode_number}}/"
 		<h1>{{show.title}}</h1>
 		<h3>Season {{show.season_number}} &middot; Episode {{show.episode_number}}</h3>
 
-	{% comment %} <p><a href="https://www.youtube.com/playlist?list={{show.playlist.playlist_id}}">YT</a></p> {% endcomment %}
-	{% comment %} <p style="margin: 4vw 0"><a href="https://www.youtube.com/watch?v={{show.playlist.video_id}}&list={{show.playlist.playlist_id}}" target="_blank" rel="noreferrer">Play</a></p> {% endcomment %}
+	{% comment %} <p><a href="https://www.youtube.com/playlist?list={{show.playlist_id}}">YT</a></p> {% endcomment %}
+	{% comment %} <p style="margin: 4vw 0"><a href="https://www.youtube.com/watch?v={{show.video_id}}&list={{show.playlist_id}}" target="_blank" rel="noreferrer">Play</a></p> {% endcomment %}
 		<p>{{show.description}}</p>
 		<p><small>{{show.credits}}</small></p>
 	</div>
