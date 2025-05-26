@@ -1,9 +1,10 @@
-# strrr-html
+# strrr.tv
 
-A tiny prototype for a simpler, non-spa strrr.tv website. 
+~~A tiny prototype~~ now the new (2025) simpler version of the https://strrr.tv we made back in 2014.
+
 You can browse seasons and watch all episodes.
 
-## Developing
+## developing
 
 Currently
 
@@ -13,7 +14,9 @@ Currently
 
 The `main` branch automatically deploys to https://list.strrr.tv via Cloudflare workers.
 
-## How is the site made?
+## how is the site made?
+
+> We are currently using YouTube playlists directly instead of our old backend so we actually don't really use the videos.
 
 Strrr is made of shows (grouped into seasons) and videos. They are defined in `./types.js`.
 
@@ -28,7 +31,7 @@ Using (eleventy)[https://www.11ty.dev/] we build a static website with the data:
 
 The `<strrr-player`> web component is responsible for playing the videos and prev/next.
 
-## History
+## history
 
 Strrr was made in 2014 I believe. We made an Elixir Phoenix API and a ember.js SPA. The API still runs, didn't crash once in 10 years. But unfortunately today the ember app has become too old to upgrade, and does no longer run. This is why this simpler version now exist.
 
